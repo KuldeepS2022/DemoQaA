@@ -38,7 +38,7 @@ public class UploadsDownloadsTest extends TestBase {
 	}
 
 	
-	//jenkins 2
+	//jenkins
 	@Test
 	public void verifyUserIsAbleTODownloadFile() {
 		uploadDownloadPage.clickDownloadBtn();
