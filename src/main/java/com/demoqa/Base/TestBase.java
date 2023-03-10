@@ -18,14 +18,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 
 	public static WebDriver driver;
-	Browsers DEFAULT_BROWSER = Browsers.GOOGLE_CHROME;
+	Browsers DEFAULT_BROWSER ;
 	public static WebdriverEvents events;
 	public EventFiringWebDriver eventFiringWebDriver;
 
 	public void launchBrowser() {
 		HashMap<String, Object> preferences = new HashMap<String, Object>();
 		preferences.put("download.default_directory", System.getProperty("user.dir"));
-		System.getProperty("user.dir");
+		String browserName=System.getProperty("Browser1");
+		if(browserName!=null) {
+			DEFAULT_BROWSER=Browsers.valueOf(browserName);
+		}else {
+			DEFAULT_BROWSER=Browsers.EDGE;
+		}
 
 		switch (DEFAULT_BROWSER) {
 		case GOOGLE_CHROME:
