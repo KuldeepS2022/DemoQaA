@@ -25,7 +25,7 @@ public class TestBase {
 	public void launchBrowser() {
 		HashMap<String, Object> preferences = new HashMap<String, Object>();
 		preferences.put("download.default_directory", System.getProperty("user.dir"));
-		String browserName=System.getProperty("Browser");
+		String browserName=System.getProperty("browser");
 		if(browserName!=null) {
 			DEFAULT_BROWSER=Browsers.valueOf(browserName);
 		}else {
