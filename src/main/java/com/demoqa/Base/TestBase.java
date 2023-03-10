@@ -25,12 +25,13 @@ public class TestBase {
 	public void launchBrowser() {
 		HashMap<String, Object> preferences = new HashMap<String, Object>();
 		preferences.put("download.default_directory", System.getProperty("user.dir"));
+		System.getProperty("user.dir");
 
 		switch (DEFAULT_BROWSER) {
 		case GOOGLE_CHROME:
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.setExperimentalOption("prefs", preferences);
+//			chromeOptions.setExperimentalOption("prefs", preferences);
 			driver = new ChromeDriver(chromeOptions);
 			break;
 		case EDGE:
