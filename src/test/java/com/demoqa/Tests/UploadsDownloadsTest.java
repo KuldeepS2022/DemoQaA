@@ -31,7 +31,7 @@ public class UploadsDownloadsTest extends TestBase {
 
 	@Test
 	public void verifyuploadFunctionality() {
-		uploadFile("C:\\Users\\navjo\\Downloads\\sampleFile.jpeg", uploadDownloadPage.UploadBtn());
+		uploadFile("C:\\Users\\deepg\\Downloads\\sampleFile.jpeg", uploadDownloadPage.UploadBtn());
 		softAssert.assertEquals(uploadDownloadPage.getUploadedFileName(), "sampleFile.jpeg",
 				"File name did not matched");
 		softAssert.assertAll();

@@ -36,7 +36,7 @@ public class TestBase {
 		case GOOGLE_CHROME:
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
-//			chromeOptions.setExperimentalOption("prefs", preferences);
+        	chromeOptions.setExperimentalOption("prefs", preferences);
 			driver = new ChromeDriver(chromeOptions);
 			break;
 		case EDGE:
