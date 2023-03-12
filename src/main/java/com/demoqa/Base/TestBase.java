@@ -29,7 +29,7 @@ public class TestBase {
 		if(browserName!=null) {
 			DEFAULT_BROWSER=Browsers.valueOf(browserName);
 		}else {
-			DEFAULT_BROWSER=Browsers.EDGE;
+			DEFAULT_BROWSER=Browsers.GOOGLE_CHROME;
 		}
 
 		switch (DEFAULT_BROWSER) {
